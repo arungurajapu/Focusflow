@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow Dashboard v2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FocusFlow</h1>
+            <p>Your AI-Powered Wellness Coach</p>
+        </header>
+
+        <main class="dashboard-layout">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed') }}" width="100%">
+            </div>
+            <div class="stats-grid">
+                <div id="posture-card" class="card">
+                    <div class="card-icon"> posture </div>
+                    <div class="card-content">
+                        <h3>Posture</h3>
+                        <p id="posture-status">--</p>
+                    </div>
+                </div>
+                <div id="tilt-card" class="card">
+                    <div class="card-icon"> screen_rotation </div>
+                    <div class="card-content">
+                        <h3>Head Tilt</h3>
+                        <p id="tilt-status">--</p>
+                    </div>
+                </div>
+                <div id="distance-card" class="card">
+                    <div class="card-icon"> social_distance </div>
+                    <div class="card-content">
+                        <h3>Screen Distance</h3>
+                        <p id="distance-status">--</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"> visibility </div>
+                    <div class="card-content">
+                        <h3>Blinks</h3>
+                        <p id="blink-status">--</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
